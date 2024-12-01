@@ -1,0 +1,183 @@
+.advertisement--header--logo{
+  margin-top: 90px;
+}
+
+.advertisement-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 60px;
+}
+
+.advertisement-header--description{
+  max-width: 975px;
+}
+
+.advertisement-header--description--title{
+  margin: 6px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 57px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.advertisement-header--description--text{
+  margin-top: 10px;
+  color: #999999;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.advertisement-content{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.advertisement--card{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid #262626;
+  border-radius: 12px;
+}
+
+.advertisement--card--image{
+
+  width: 100%;
+  height: 100%;
+}
+
+.advertisement--card--text{
+  display: flex;
+  flex-direction: column;
+}
+
+.advertisement--card--text--title{
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  // text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+
+}
+
+.advertisement--card--text--description{
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.advertisement--card--logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  margin-top: 24px;
+}
+
+.advertisement--card--logo--item {
+  display: flex;
+  align-items: center; 
+  gap: 1px;
+  background-color: #1A1A1A;
+  border: 1px solid #262626; 
+  border-radius: 28px;
+}
+
+.advertisement--card--logo--item--images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advertisement--card--logo--item--images img {
+  max-width: 100%; 
+  object-fit: contain; 
+}
+
+.advertisement--card--logo--item p {
+  margin: 0; 
+  font-size: 14px; 
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.advertisement--card--footer{
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.advertisement--card--text--price{
+  display: flex;
+  flex-direction: column;
+}
+
+.advertisement--card--text--price--text{
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.advertisement--card--text--price--number{
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.advertisement-pagination{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #262626;
+  margin-top: 40px;
+  padding-top:16px;
+}
+
+@media (max-width: 900px) {
+  .advertisement--card{
+    padding: 0;
+  }
+
+
+}

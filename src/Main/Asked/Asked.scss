@@ -1,0 +1,78 @@
+
+
+.asked{
+  margin-top: 120px;
+}
+
+.asked-header--title{
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 57px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.asked-header--text{
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.asked-content {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; 
+}
+
+.asked-card {
+  background: transparent; 
+  padding: 40px; 
+  border: 1px solid #262626;
+  border-radius: 12px; 
+
+}
+
+.asked-card--title{
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.asked-card--description{
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+
+.asked-pagination {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #262626;
+  margin-top: 40px;
+  padding-top:16px;
+}

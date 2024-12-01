@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "title": "Seaside Serenity Villa",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More",
+    "price": "$550,000",
+    "image": "/imagesJson/advertisement1.png"
+  },
+
+  {
+    "id": 2,
+    "title": "Seaside Serenity Villa",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More",
+    "price": "$550,000",
+    "image": "/imagesJson/advertisement1.png"
+  },
+  {
+    "id": 3,
+    "title": "Seaside Serenity V",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More",
+    "price": "$550,000",
+    "image": "/imagesJson/advertisement1.png"
+  },
+  {
+    "id": 4,
+    "title": "Seaside Serenity V",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More",
+    "price": "$550,000",
+    "image": "/imagesJson/advertisement1.png"
+  },
+  {
+    "id": 5,
+    "title": "Seaside Serenity V",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More",
+    "price": "$550,000",
+    "image": "/imagesJson/advertisement1.png"
+  },
+  {
+    "id": 6,
+    "title": "Seaside Serenity V",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More",
+    "price": "$550,000",
+    "image": "/imagesJson/advertisement1.png"
+  }
+ 
+ 
+ 
+]

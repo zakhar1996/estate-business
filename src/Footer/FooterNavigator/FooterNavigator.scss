@@ -1,0 +1,129 @@
+.footerNavigator{
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.footerNavigator--header{
+  display: flex;
+  flex-direction: column;
+}
+
+.footerNavigator-logo{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footerNavigator-logo--images{
+  max-width:34px;
+  max-height: 34px;
+}
+
+.footerNavigator-logo--images{
+  width: 100%;
+  height: 100%;
+}
+
+.footerNavigator-logoText{
+  margin: 0;
+  color: #FFFFFF;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.footerNavigator-email{
+  margin-top: 40px;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  display: flex;
+  padding-left:20px;
+  padding-right: 20px;
+  height: 52px;
+}
+
+.footerNavigator-emailButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  & .footerNavigator-emailIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footerNavigator-emailInput{
+  background-color: #1A1A1A;;
+  border: none;
+  background-image: url('../../imagesLogo/mail.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 16px;
+  padding-left: 30px;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.footerNavigator-links{
+  width: 100%;
+  max-width: 875px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerNavigator-linksColumn h4{
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #999999;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.footerNavigator-linksColumn ul{
+  list-style: none; 
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footerNavigator-linksColumn li {
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+
+@media (max-width: 768px) {
+  .footerNavigator{
+    gap: 5px;
+  }
+
+
+  }
