@@ -1,0 +1,257 @@
+.parentContainer{
+  display: grid;
+  grid-template-columns: 80px repeat(12, 1fr) 80px;
+  gap: 8px; 
+  background-color: #141414;
+}
+
+.advertisement{
+  margin-top: 110px;
+}
+
+.advertisement--header--logo{
+  transform: translateX(-10px); 
+}
+
+.advertisement-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 60px;
+}
+
+.advertisement-header--description{
+  max-width: 975px;
+}
+
+.advertisement-header--description--title{
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 57px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.advertisement-header--description--text{
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #999999;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.advertisement-content{
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.advertisement--card{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  
+
+}
+
+.advertisement--card--image--wrapper {
+  width: 100%; 
+  height: auto; 
+  overflow: hidden; 
+}
+
+.advertisement--card--image {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+}
+
+
+
+.advertisement--card--text{
+  display: flex;
+  
+  flex-direction: column;
+
+}
+
+.advertisement--card--text--title{
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+
+}
+
+.advertisement--card--text--description{
+  min-height: 72px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.advertisement--card--text--description--span{
+color: #FFFFFF;
+font-family: Urbanist;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+
+// Секція питання до Олексі 
+/// З цим контентом я не можу відповідати фігмі текст займає простір 
+/// але тут проблема що контейнер вийшов менший ніж в фігмі Бо я користувався dispalay grid 
+/// потрачено 3 години на це питання
+
+.advertisement--card--logo {
+  // margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 78px; 
+  gap: 6px; 
+  width: 100%; 
+}
+
+.advertisement--card--logo--item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 28px;
+  padding: 6px 14px;
+  box-sizing: border-box;
+}
+
+.advertisement--card--logo--item:nth-child(3) {
+  max-width: 71px;
+}
+.advertisement--card--logo--item--images{
+  width: 24px;
+  height: 24px;
+}
+/* Адаптивність для менших екранів P.s потім видалити  */
+
+@media (max-width: 1300px) {
+
+  .advertisement--card--logo {
+   margin-top: 24px;
+  }
+}
+
+
+@media (max-width: 1300px) {
+
+  .advertisement--card--logo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2; 
+    gap: 6px; 
+    width: 100%; 
+  }
+
+  .advertisement--card--logo--item:nth-child(3) {
+    grid-column: 1 / -1; 
+    margin-top: 10px; 
+    max-width: 71px;
+  }
+}
+//// Момент для вирівнювання центрації відступу теста та логотипів
+@media (max-width: 1149px) {
+
+  .advertisement--card--text--description {
+   min-height: 96px;
+  }
+}
+
+// Кінець Секція питання до Олексій
+
+.advertisement--card--logo--item p {  
+  margin: 0; 
+  font-size: 14px; 
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.advertisement--card--footer{
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.advertisement--card--text--price{
+  display: flex;
+  flex-direction: column;
+}
+
+.advertisement--card--text--price--text{
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.advertisement--card--text--price--number{
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.advertisement-pagination{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #262626;
+  margin-top: 40px;
+  padding-top: 16px;
+}
+
+
+

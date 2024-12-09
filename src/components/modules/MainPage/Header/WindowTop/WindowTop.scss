@@ -1,0 +1,65 @@
+.windowTop{
+width: 100%;
+height: 49px;
+grid-column: 1 / 15;
+background-repeat: no-repeat;
+background-size: cover;
+display: grid;
+grid-template-columns: repeat(14, 1fr);
+}
+.windowTop--description{
+  grid-column: 6 / 15;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.windowTop--description--text{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.windowTop--description--line{
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.windowTop--description--lik{
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.windowTop--description--icon{
+  margin-right: 16px;
+  max-width: 26px;
+  max-height: 26px;
+  width: 100%;
+  height: 100%;
+  background-color: #141414;
+  border-radius: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.windowTop--description--icon img{
+  width: 9px;
+  height: 9px;
+}

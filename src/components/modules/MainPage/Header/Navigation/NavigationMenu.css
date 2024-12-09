@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap');
+ 
+.parentContainer--gray{
+  display: grid;
+  grid-template-columns: 80px repeat(12, 1fr) 80px;
+  gap: 8px;
+  background-color: #262626;
+}
+
+
+/* .parentContainer{
+  display: grid;
+  grid-template-columns: repeat(14, 1fr); 
+  gap: 8px; 
+  background-color: #1A1A1A;
+} */
+
+.container{
+  grid-column: 2 / 14; 
+}
+
+.navigationMenyWrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 77px;
+  background-color: #262626;
+}
+
+.navigationMenyWrapper--logo{
+  display: flex;
+  align-items: center;
+  gap: 7.25px;
+}
+
+.navigationMenyWrapper--logo--text{
+  color:#FFFFFF;
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.navigationMenyWrapper--pages{
+  width: 100%;
+  max-width: 322px;
+  height: 100%;
+  max-height: 45px; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigationMenyWrapper--pages a {
+  align-content: center;
+  text-decoration: none;
+  transition: border 0.3s;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  border: 3px solid transparent; 
+  transition: 0.9s;
+}
+
+/* .navigationMenyWrapper--pages a:hover {
+  transition: 1.ms;
+  outline: 1px solid #262626; 
+  border-radius: 8px;
+  padding-right:20px;
+  padding-left: 20px;
+} */
+
+.contactUsButton{
+  border: 1px solid #262626;
+  padding: 14px 20px 14px 20px;
+  background: none; 
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left; 
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  border-radius: 8px;
+  transition: 0.9s;
+}
+
+.contactUsButton:hover{
+  background-color: #703BF7;
+}

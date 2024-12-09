@@ -1,0 +1,17 @@
+.buttons--template {
+border: 1px solid #262626;
+border-radius: 8px;
+ display: flex;
+ text-align: center;
+ justify-content: center;
+ align-items: center; 
+ box-sizing: border-box;
+ font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+

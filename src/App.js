@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import '@/App.css';
-import NavigationMenu from '@/Header/Navigation/NavigationMenu';
-import HeaderTitle from './Header/HeaderTitle/HeaderTitle';
-import Advantage from './Header/Advantage/Advantage'; 
-import Testimonials from './Main/Testimonials/Testimonials';
-import Advertisement from "./Main/Advertisement/Advertisement";
-import Asked from './Main/Asked/Asked';
-import Article from './Footer/Article/Article';
-import FooterNavigator from './Footer/FooterNavigator/FooterNavigator';
-import FooterBottom from './Footer/FooterBottom/FooterBottom'
+import NavigationMenu from '@/components/modules/MainPage/Header/Navigation/NavigationMenu';
+import WindowTop from '@/components/modules/MainPage/Header/WindowTop/WindowTop';
+import HeaderTitle from '@/components/modules/MainPage/Header/HeaderTitle/HeaderTitle';
+import Advantage from '@/components/modules/MainPage/Header/Advantage/Advantage'; 
+import Testimonials from '@/components/modules/MainPage/Main/Testimonials/Testimonials';
+import Advertisement from "@/components/modules/MainPage/Main/Advertisement/Advertisement";
+import Asked from '@/components/modules/MainPage/Main/Asked/Asked';
+import Article from '@/components/modules/MainPage/Footer/Article/Article';
+import FooterNavigator from '@/components/modules/MainPage/Footer/FooterNavigator/FooterNavigator';
+import FooterBottom from '@/components/modules/MainPage/Footer/FooterBottom/FooterBottom'
 
 const HomePage = () => (
   <>
@@ -24,6 +25,7 @@ function App() {
     <Router>
       <div className="mainHomePage--wrapper">
         <div className="mainHomePage">
+          <WindowTop />
           <NavigationMenu />
           <HeaderTitle />
           <Advantage />
