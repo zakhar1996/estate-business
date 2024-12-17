@@ -70,7 +70,7 @@ const Advertisement = () => {
               </p>
             </div>
             <div className="advertisement-header--button">
-            <Button type="primary">View All Properties</Button>
+            <Button type="tertiary">View All Properties</Button>
             </div>
           </div>
           <div className="advertisement-content">
