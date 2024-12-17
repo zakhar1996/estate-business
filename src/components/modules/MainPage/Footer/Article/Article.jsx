@@ -1,7 +1,6 @@
 import React from "react";
 import "@/components/modules/MainPage/Footer/Article/Article.scss";
-import Button from '@/components/Elements/Button/Button';
-
+import Button from "@/components/Elements/Button/Button";
 
 const Article = () => {
   return (
@@ -12,7 +11,7 @@ const Article = () => {
         </div>
 
         <div className="backgroundRight">
-        <img src="/images/FooterbackgroundRight.png" alt="" />
+          <img src="/images/FooterbackgroundRight.png" alt="" />
         </div>
 
         <div className="textOverlay">
@@ -28,10 +27,7 @@ const Article = () => {
             </p>
           </div>
           <div className="buttonArticle">
-            <Button 
-            backgroundColor = "#703BF7"
-            maxWidth = "152px"
-            text="Explore Properties" onClick={() => alert("Small")} />
+            <Button type="secondary" fullWidth={true}>Explore Properties</Button>
           </div>
         </div>
       </div>

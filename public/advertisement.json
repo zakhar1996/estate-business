@@ -16,7 +16,7 @@
   },
   {
     "id": 3,
-    "title": "Rustic Retreat Cottage",
+    "title": "Rustic Retreat ",
     "description": "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community...",
     "price": "$550,000",
     "image": "/imagesJson/advertisement3.png"
@@ -24,21 +24,21 @@
   {
     "id": 4,
     "title": "Seaside Serenity V",
-    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...",
     "price": "$550,000",
     "image": "/imagesJson/advertisement1.png"
   },
   {
     "id": 5,
     "title": "Seaside Serenity V",
-    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...",
     "price": "$550,000",
     "image": "/imagesJson/advertisement1.png"
   },
   {
     "id": 6,
     "title": "Seaside Serenity V",
-    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... Read More",
+    "description": "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood...",
     "price": "$550,000",
     "image": "/imagesJson/advertisement1.png"
   }

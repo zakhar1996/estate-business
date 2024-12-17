@@ -4,9 +4,8 @@
   display: grid;
   grid-template-columns: 80px repeat(12, 1fr) 80px;
   gap: 8px;
-  background-color: #262626;
+  background-color: #1A1A1A;
 }
-
 
 /* .parentContainer{
   display: grid;
@@ -24,7 +23,7 @@
   justify-content: space-between;
   align-items: center;
   height: 77px;
-  background-color: #262626;
+  background-color: #1A1A1A;
 }
 
 .navigationMenyWrapper--logo{
@@ -94,6 +93,73 @@
   transition: 0.9s;
 }
 
+
+.navigationMenyWrapper--pages .active-link {
+  background-color: #141414;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  padding: 14px 24px;
+  text-align: center;
+  align-self: center;
+}
+
 .contactUsButton:hover{
   background-color: #703BF7;
+}
+
+.burger-menu{
+  display: none;
+}
+
+@media (max-width: 900px) {
+.parentContainer--gray{
+  position: relative;
+  padding-left: 16px;
+  padding-right: 16px;
+  grid-template-columns: repeat(6,1fr);
+}
+
+.container{
+  grid-column: 1 / 7;
+}
+
+.buttonWrapperNavigationMenu{
+  display: none;
+}
+.navigationMenyWrapper--pages {
+  display: none; 
+}
+
+.burger-menu {
+  display: flex; 
+  position: absolute;
+  top: 26px;
+  right: 16px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.navigationMenyWrapper--pages.open {
+  position: absolute;
+  top: -3px;
+  right: -77px;
+  z-index: 1;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 10px 0;
+}
+
+.navigationMenyWrapper--pages a {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.navigationMenyWrapper--pages a:hover {
+  background-color: #444;
+}
+
 }

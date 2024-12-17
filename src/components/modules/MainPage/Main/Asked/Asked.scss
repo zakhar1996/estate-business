@@ -1,5 +1,5 @@
 .asked{
-  margin-top: 78px;
+  margin-top: 90px;
 }
 
 .asked--header--logo{
@@ -50,6 +50,9 @@
   padding: 40px; 
   border: 1px solid #262626;
   border-radius: 12px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
 }
 
@@ -67,7 +70,7 @@
 
 .asked-card--description{
   margin-top: 24px;
-  margin-bottom: 38px;
+  margin-bottom: 24px;
   font-family: Urbanist;
   font-size: 16px;
   font-weight: 500;
@@ -87,3 +90,51 @@
   margin-top: 40px;
   padding-top:16px;
 }
+
+@media (max-width: 900px) {
+
+.asked{
+  margin-top: 61px;
+}
+
+.asked-container{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.asked-header--text--button{
+  display: none;
+}
+
+.asked-header--title{
+  font-size: 28px;
+}
+
+.asked-header--text{
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.asked-content {
+  margin-top:40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.asked-card{
+  padding: 30px;
+}
+
+.asked-card--title{
+  font-size: 18px;
+}
+
+.asked-card--description{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+
+}
+  

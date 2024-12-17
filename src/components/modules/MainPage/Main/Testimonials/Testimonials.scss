@@ -1,5 +1,5 @@
 .testimonial{
-  margin-top: 94.8px;
+  margin-top: 90px;
 }
 
 .testimonial--header--logo{
@@ -211,5 +211,101 @@
 
 .pagination-button:not([disabled]) {
   cursor: pointer;
+}
+
+.pagination--button--mobile{
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .testimonials-list{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+.testimonial {
+  margin-top: 61px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.testimonial--header-title{
+  font-size: 28px;
+}
+
+.advertisement-header--description--text{
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.testimonial--header-button{
+  display: none;
+}
+
+.testimonials-list{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial--card{
+  padding: 30px;
+}
+
+.testimonial--card--text--title{
+  margin-top: 24px;
+  font-size: 18px;
+}
+
+.testimonial--card--text--description{
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.testimonial--card--client-info{
+  margin-top: 26.5;
+  gap: 10px;
+}
+
+.testimonial--card--client-name{
+  font-size: 16px;
+}
+
+.testimonial--card--client-location{
+  font-size: 14px;
+}
+
+// Адаптація нижньої частини
+.pagination--button--mobile{
+  display: block;
+}
+
+.pagination--wrapper{
+  position: relative;
+}
+
+.pagination{
+  margin-top: 30px;
+  flex-direction: row-reverse;
+}
+
+.pagination-buttons{
+  display: flex;
+  gap: 68px;
+}
+
+.pagination-info{
+  position: absolute;
+  right: 64px;
+  top: 28px;
+}
+
+.pagination--button--mobile{
+  position: absolute;
+  display: flex;
+  top: 16px;
+}
+  // Кінець Адаптація нижньої частини
 }
 

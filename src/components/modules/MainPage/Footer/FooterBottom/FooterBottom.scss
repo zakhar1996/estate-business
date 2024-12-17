@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .footerNavigator-bottomText {
@@ -40,7 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #222;
+  background-color: #141414;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -53,6 +54,42 @@
   object-fit: contain;
 }
 
+@media (max-width: 900px) {
+
+.footerContainer{
+  margin-top: 50px;
+  display: block;
+  height: auto;
+}
+
+.footerNavigator-bottom{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.footerNavigator-socialIcons{
+  margin-top: 20px;
+}
+
+.footerNavigator-socialIcons a{
+  width: 60px;
+  height: 60px;
+}
+
+.footerNavigator-bottomText{
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.footerNavigator-bottomText p{
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+}
 
 
 

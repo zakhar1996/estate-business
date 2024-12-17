@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "@/components/modules/MainPage/Header/Navigation/NavigationMenu.css";
+import Button from "@/components/Elements/Button/Button";
+import { NavLink } from "react-router-dom";
 
 function NavigationMenu() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="parentContainer--gray">
       <div className="container">
@@ -12,13 +19,52 @@ function NavigationMenu() {
             </div>
             <div className="navigationMenyWrapper--logo--text">Estatein</div>
           </div>
-          <div className="navigationMenyWrapper--pages">
-            <a href="#link1">Home</a>
-            <a href="#link2">About Us</a>
-            <a href="#link3">Properties</a>
-            <a href="#link4">Services</a>
+
+          <div className="burger-menu" onClick={toggleMenu}>
+            <img src="/images/burgerIcon.png" alt="Burger Icon" />
           </div>
-          <button className="contactUsButton">Contact Us</button>
+
+          <div
+            className={`navigationMenyWrapper--pages ${
+              isMenuOpen ? "open" : ""
+            }`}
+          >
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "active-link" : "inactive-link"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "active-link" : "inactive-link"
+              }
+            >
+              About Us
+            </NavLink>
+            <NavLink
+              to="/properties"
+              className={({ isActive }) =>
+                isActive ? "active-link" : "inactive-link"
+              }
+            >
+              Properties
+            </NavLink>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                isActive ? "active-link" : "inactive-link"
+              }
+            >
+              Services
+            </NavLink>
+          </div>
+          <div className="buttonWrapperNavigationMenu">
+            <Button type="primary">Learn More</Button>
+          </div>
         </div>
       </div>
     </div>

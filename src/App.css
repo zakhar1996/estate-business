@@ -2,6 +2,7 @@
 background-color: #141414; 
 }
 
-.mainHomePage {
-
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Забороняє горизонтальний скролінг */
 }

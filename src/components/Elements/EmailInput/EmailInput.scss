@@ -1,0 +1,44 @@
+
+.footerNavigator-email{
+  border: 1px solid #262626;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  padding-left:20px;
+  padding-right: 16.3px;
+  height: 52px;
+  width: 100%;///// при налаштуванні ширини як по фігмі Gap з лінками буде інший
+  box-sizing: border-box;
+}
+
+.footerNavigator-emailButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  & .footerNavigator-emailIcon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footerNavigator-emailInput{
+  background-color: #141414;
+  border: none;
+  width: 100%;
+  color: #ffff;
+  // background-image: url('imagesLogo/mail.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 16px;
+  padding-left: 30px;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}

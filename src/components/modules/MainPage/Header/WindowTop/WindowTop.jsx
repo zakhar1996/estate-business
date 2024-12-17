@@ -5,7 +5,7 @@ function WindowTop() {
   const [isVisible, setIsVisible] = useState(true);
 
   const handleIconClick = () => {
-    setIsVisible(false); 
+    setIsVisible(false);
   };
 
   return (
@@ -47,4 +47,3 @@ function WindowTop() {
 }
 
 export default WindowTop;
-

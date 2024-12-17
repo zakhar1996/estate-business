@@ -5,7 +5,7 @@ import Button from "@/components/Elements/Button/Button.jsx";
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
   const [currentTEIndex, setCurrentTeIndex] = useState(0);
-  const itemsPerGroup = 3;
+  const [itemsPerGroup, setPerGroup] = useState(3);
 
   useEffect(() => {
     fetch(process.env.PUBLIC_URL + "/testimonials.json")
@@ -14,6 +14,24 @@ const Testimonials = () => {
         setTestimonials(data);
       })
       .catch((error) => console.error("Error fetching testimonials:", error));
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1300) {
+        setPerGroup(3);
+      } else if (window.innerWidth <= 1130 && window.innerWidth >= 901) {
+        setPerGroup(2);
+      } else if (window.innerWidth <= 900) {
+        setPerGroup(1);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const goToPreviousGroup = () => {
@@ -63,15 +81,13 @@ const Testimonials = () => {
                 What Our Clients Say
               </h2>
               <p className="testimonial--header-description">
-              Read the success stories and heartfelt testimonials from our valued clients. Discover why they chose Estatein for their real estate needs.
+                Read the success stories and heartfelt testimonials from our
+                valued clients. Discover why they chose Estatein for their real
+                estate needs.
               </p>
             </div>
             <div className="testimonial--header-button">
-              <Button
-                text="View All Properties"
-                maxWidth="170px"
-                onClick={() => alert("")}
-              />
+              <Button type="tertiary">View All Testimonials</Button>
             </div>
           </div>
 
@@ -109,39 +125,43 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
+          <div className="pagination--wrapper">
+            <div className="pagination">
+              <div className="pagination-info">
+                {String(currentTEIndex + 1).padStart(2, "0")} of{" "}
+                {String(testimonials.length).padStart(2, "0")}
+              </div>
 
-          <div className="pagination">
-            <div className="pagination-info">
-              {String(currentTEIndex + 1).padStart(2, "0")} of{" "}
-              {String(testimonials.length).padStart(2, "0")}
+              <div className="pagination-buttons">
+                <button
+                  onClick={goToPreviousGroup}
+                  disabled={currentTEIndex === 0}
+                  className="pagination-button prev"
+                >
+                  <img
+                    src="/images/arrowLeft.png"
+                    alt="Previous"
+                    className="arrow"
+                  />
+                </button>
+
+                <button
+                  onClick={goToNextGroup}
+                  disabled={
+                    (currentTEIndex + 1) * itemsPerGroup >= testimonials.length
+                  }
+                  className="pagination-button next"
+                >
+                  <img
+                    src="/images/arrowRigth.png"
+                    alt="Next"
+                    className="arrow"
+                  />
+                </button>
+              </div>
             </div>
-
-            <div className="pagination-buttons">
-              <button
-                onClick={goToPreviousGroup}
-                disabled={currentTEIndex === 0}
-                className="pagination-button prev"
-              >
-                <img
-                  src="/images/arrowLeft.png"
-                  alt="Previous"
-                  className="arrow"
-                />
-              </button>
-
-              <button
-                onClick={goToNextGroup}
-                disabled={
-                  (currentTEIndex + 1) * itemsPerGroup >= testimonials.length
-                }
-                className="pagination-button next"
-              >
-                <img
-                  src="/images/arrowRigth.png"
-                  alt="Next"
-                  className="arrow"
-                />
-              </button>
+            <div className="pagination--button--mobile">
+              <Button type="secondary">View All Properties</Button>
             </div>
           </div>
         </div>

@@ -15,19 +15,8 @@ const HeaderTitle = () => {
             our listings to find the home that matches your dreams.
           </p>
           <div className="header-title--buttons">
-            <Button
-              className="buttons--template--changeHeaderTitle"
-              text="Learn More"
-              maxWidth="111px"
-              onClick={() => alert("")}
-            />
-            <Button
-              className="buttons--template--changeHeaderTitle"
-              text="Browse Properties"
-              maxWidth="151px"
-              backgroundColor="#703BF7"
-              onClick={() => alert("")}
-            />
+            <Button type="primary" fullWidth = {false}>Learn More</Button>
+            <Button type="secondary">Browse Properties</Button>
           </div>
           <div className="header-title--experience">
             <div className="header-title--experience--case">

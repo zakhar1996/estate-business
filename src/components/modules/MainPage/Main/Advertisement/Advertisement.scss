@@ -60,35 +60,36 @@
 .advertisement--card{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding: 30px;
   border: 1px solid #262626;
   border-radius: 12px;
-  
-
 }
 
 .advertisement--card--image--wrapper {
   width: 100%; 
   height: auto; 
-  overflow: hidden; 
+  overflow: hidden;
+  // max-width: 100%;
+  // display: flex;
 }
 
 .advertisement--card--image {
   width: 100%; 
   height: auto; 
   object-fit: cover; 
+  // max-width: 100%;
+  // height: auto;
+  // display: block;
+  // object-fit: contain;
 }
-
-
 
 .advertisement--card--text{
   display: flex;
-  
   flex-direction: column;
-
 }
 
-.advertisement--card--text--title{
+.advertisement--card--text--title{ 
   margin-top: 20px;
   margin-bottom: 0;
   font-family: Urbanist;
@@ -99,11 +100,9 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #FFFFFF;
-
 }
 
 .advertisement--card--text--description{
-  min-height: 72px;
   margin-top: 4px;
   margin-bottom: 0;
   font-family: Urbanist;
@@ -117,29 +116,24 @@
 }
 
 .advertisement--card--text--description--span{
-color: #FFFFFF;
-font-family: Urbanist;
-font-size: 16px;
-font-weight: 500;
-line-height: 24px;
-text-align: left;
-text-decoration-line: underline;
-text-decoration-style: solid;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
-// Секція питання до Олексі 
-/// З цим контентом я не можу відповідати фігмі текст займає простір 
-/// але тут проблема що контейнер вийшов менший ніж в фігмі Бо я користувався dispalay grid 
-/// потрачено 3 години на це питання
-
 .advertisement--card--logo {
-  // margin-top: 24px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr) 78px; 
-  gap: 6px; 
-  width: 100%; 
+  margin-top: 24px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+ 
 }
 
 .advertisement--card--logo--item {
@@ -154,49 +148,16 @@ text-decoration-skip-ink: none;
 }
 
 .advertisement--card--logo--item:nth-child(3) {
-  max-width: 71px;
+  // max-width: 71px;
 }
 .advertisement--card--logo--item--images{
   width: 24px;
   height: 24px;
 }
-/* Адаптивність для менших екранів P.s потім видалити  */
-
-@media (max-width: 1300px) {
-
-  .advertisement--card--logo {
-   margin-top: 24px;
-  }
-}
-
-
-@media (max-width: 1300px) {
-
-  .advertisement--card--logo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 2; 
-    gap: 6px; 
-    width: 100%; 
-  }
-
-  .advertisement--card--logo--item:nth-child(3) {
-    grid-column: 1 / -1; 
-    margin-top: 10px; 
-    max-width: 71px;
-  }
-}
-//// Момент для вирівнювання центрації відступу теста та логотипів
-@media (max-width: 1149px) {
-
-  .advertisement--card--text--description {
-   min-height: 96px;
-  }
-}
-
-// Кінець Секція питання до Олексій
 
 .advertisement--card--logo--item p {  
+  white-space: nowrap;
+  text-size-adjust: auto;
   margin: 0; 
   font-size: 14px; 
   font-family: Urbanist;
@@ -212,8 +173,7 @@ text-decoration-skip-ink: none;
 .advertisement--card--footer{
   margin-top: 24px;
   display: flex;
-  justify-content: space-between;
-  
+  gap: 30px;
 }
 
 .advertisement--card--text--price{
@@ -245,13 +205,99 @@ text-decoration-skip-ink: none;
   color: #FFFFFF;
 }
 
-.advertisement-pagination{
+////////
+.advertisement-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+@media (max-width: 1100px) {
+  .advertisement-content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+.advertisement{
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 65px;
+}
+
+.advertisement-content {
+  grid-template-columns: 1fr; 
+}
+
+.advertisement-header{
+  margin-bottom: 40px;
+}
+
+.advertisement-header--button{
+  display: none;
+}
+
+.advertisement-header--description{
+  width: 100%;
+}
+
+.advertisement-header--description--title {
+  font-size: 28px;
+}
+
+.advertisement-header--description--text{
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.advertisement--card{
+  padding: 24px;
+}
+
+.advertisement--card--text--title{
+  font-size: 28px;
+  margin-top: 16px;
+}
+
+.advertisement--card--text--description{
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+.advertisement--card--logo{
+  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
-  border-top: 1px solid #262626;
-  margin-top: 40px;
-  padding-top: 16px;
+  gap:6px;
+}
+
+// Адаптація нижньої частини
+// .advertisement-pagination--wrapper{
+//   position: relative;
+// }
+
+// .pagination-buttons{
+//   display: flex;
+//   gap: 68px;
+// }
+
+// .pagination-info{
+//   position: absolute;
+//   right: 64px;
+//   top: 28px;
+// }
+
+// .advertisement--button--mobile{
+//   position: absolute;
+//   display: flex;
+//   top: 16px;
+// }
+
+// .advertisement-pagination{
+//   justify-content: end;
+// }
+  // Кінець Адаптація нижньої частини
 }
 
 
 
+  

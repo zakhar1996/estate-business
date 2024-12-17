@@ -7,14 +7,13 @@ background-size: cover;
 display: grid;
 grid-template-columns: repeat(14, 1fr);
 }
+
 .windowTop--description{
   grid-column: 6 / 15;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-
 
 .windowTop--description--text{
   display: flex;
@@ -47,7 +46,7 @@ grid-template-columns: repeat(14, 1fr);
 }
 
 .windowTop--description--icon{
-  margin-right: 16px;
+  margin-right: 36px;
   max-width: 26px;
   max-height: 26px;
   width: 100%;
@@ -62,4 +61,36 @@ grid-template-columns: repeat(14, 1fr);
 .windowTop--description--icon img{
   width: 9px;
   height: 9px;
+}
+
+@media (max-width: 900px) {
+
+.windowTop{
+  grid-column: 1 / 7;
+  grid-template-columns: repeat(6,1fr);
+  gap: 10px;
+}
+
+.windowTop--description{
+  padding-left: 16px;
+  padding-right: 16px;
+  grid-column: 1 / 8;
+}
+
+.windowTop--description--text{
+  gap: 6px;
+}
+
+.windowTop--description--text p{
+  font-size: 12px;
+}
+
+.windowTop--description--text a{
+  font-size: 12px;
+}
+
+.windowTop--description--icon{
+  margin-right: 0;
+}
+
 }

@@ -1,6 +1,4 @@
 
-
-
 .header-title {
   grid-column: 1 / 15; 
   display: grid;
@@ -97,6 +95,7 @@
   padding-left: 10px;   /* Не відповідає Фігмі Бо не коректно тут вилядає */
   padding-top: 14px;
   padding-bottom: 14px; 
+  background-color: #1A1A1A;
   
 }
 
@@ -126,51 +125,52 @@
 
 @media (max-width: 900px) {
 .parentContainer{
- grid-template-columns: repeat(8, 1fr)!important;
- gap: 16px;
- 
+  grid-template-columns: repeat(6, 1fr)!important;
+  gap: 16px;
 }
 
 .header-title{
   display: grid;
-  grid-column: 1 / 9;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 302px 1fr;
-
+  grid-column: 1 / 7;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto 1fr;
+  
 }
 
 .header-title--info{
   padding-left:16px;
   padding-right: 16px;
   grid-row: 2;
-  grid-column: 1 / 9;
+  grid-column: 1 / 7;
   margin-top: 64.07px;
 }
 
 .header-title--info h1{
   font-size: 28px;
   line-height: 33.6px;
-
+  margin-bottom: 16px;
 }
 
-
 .header-title--buttons{
+  margin-top: 40px;
   flex-direction: column;
 }
 
 .buttons--template--changeHeaderTitle {
   max-width: 100%!important;
-  background-color: aqua; /* Кнопка буде 100% ширини на малих екранах */
 }
 
 .header-title--logo{
-  grid-column: 2;
-  top: 24%;
+  grid-column: 1;
+  left: 16px;
+  top: 43%;
 }
 .header-title--images{
   grid-row: 1;
-  grid-column: 1 / 10;
-  // background-image: url(@/images/headerTitleImagesMobile.png);
+  grid-column: 1 / 7;
+  background-position: center; 
+  height: auto;
+  height: 70vh;
 }
 
 .header-title--experience{
@@ -181,6 +181,26 @@
 .header-title--experience--case{
   width: 40%;
   max-width: 100%;
+}
+
+.header-title--experience {
+  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 12px; 
+  margin-bottom: 40px;
+}
+
+.header-title--experience--case {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  flex: 1 1 33.3%; 
+}
+
+.header-title--experience--case:last-child {
+  flex: 1 1 100%; 
+  width: 100%; 
 }
 
 

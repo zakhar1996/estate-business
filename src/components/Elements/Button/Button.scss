@@ -1,17 +1,42 @@
-.buttons--template {
-border: 1px solid #262626;
-border-radius: 8px;
- display: flex;
- text-align: center;
- justify-content: center;
- align-items: center; 
- box-sizing: border-box;
- font-family: Urbanist;
+
+.buttons {
+  padding: 14px 20px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: Urbanist;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  text-align: center;
+  white-space: nowrap; 
+  cursor: pointer;
+  align-self: flex-start;
 }
 
+.buttons.primary {
+  background-color: #141414; 
+}
+
+.buttons.secondary {
+  background-color: #703BF7;
+}
+
+.buttons.tertiary{
+  background-color: #1A1A1A;
+}
+
+.buttons.fullWidth {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .buttons {
+  align-self: stretch;
+  }
+
+}

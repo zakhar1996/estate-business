@@ -1,0 +1,58 @@
+.OurJourneyWrapper{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 8px;
+  margin-top: 70px;
+}
+
+.OurJourneyWrapper--description{
+  grid-column: 1 / 7;
+}
+
+.OurJourneyWrapper--content--logo{
+  margin-top: 25px;
+  transform: translateX(-10px);
+}
+
+.OurJourneyWrapper--content--title{
+  margin-top: 6.5px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 57px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.OurJourneyWrapper--content--description{
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.OurJourneyWrapper--backgroundImage{
+  grid-column: 7 / 13;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  border: 1px solid #262626;
+}
+
+.OurJourneyWrapper--images--buil{
+  width: 100%;
+  background-position: center;   
+}
+

@@ -5,14 +5,32 @@ import Button from "@/components/Elements/Button/Button.jsx";
 const Advertisement = () => {
   const [advertisements, setAdvertisements] = useState([]);
   const [currentAdIndex, setCurrentAdIndex] = useState(0);
-
-  const adsToShow = 3;
+  const [adsToShow, setAdsToShow] = useState(3);
 
   useEffect(() => {
     fetch(process.env.PUBLIC_URL + "/advertisement.json")
       .then((response) => response.json())
       .then((data) => setAdvertisements(data))
       .catch((error) => console.error("Error fetching advertisements:", error));
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1300) {
+        setAdsToShow(3);
+      } else if (window.innerWidth <= 1130 && window.innerWidth >= 901) {
+        setAdsToShow(2);
+      }
+      else if (window.innerWidth <= 900) {
+        setAdsToShow(1);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize); // Додаємо слухача подій для зміни розміру екрану
+
+    // Очищаємо обробник події при демонтажі компонента
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const goToPreviousAd = () => {
@@ -51,12 +69,9 @@ const Advertisement = () => {
                 information.
               </p>
             </div>
-            <Button
-              text="View All Properties"
-              backgroundColor = "#1A1A1A"
-              maxWidth = "155px"
-              onClick={() => alert("")}
-            />
+            <div className="advertisement-header--button">
+            <Button type="primary">View All Properties</Button>
+            </div>
           </div>
           <div className="advertisement-content">
             {visibleAds.map((ad, index) => (
@@ -87,14 +102,14 @@ const Advertisement = () => {
                     <p>4-Bedroom</p>
                   </div>
                   <div className="advertisement--card--logo--item">
-                  <div className="advertisement--card--logo--item--images">
+                    <div className="advertisement--card--logo--item--images">
                       <img src="./imagesJson/advertisementlogo2.png" alt="" />
                     </div>
                     <p>3-Bathroom</p>
                   </div>
 
                   <div className="advertisement--card--logo--item">
-                  <div className="advertisement--card--logo--item--images">
+                    <div className="advertisement--card--logo--item--images">
                       <img src="./imagesJson/advertisementlogo3.png" alt="" />
                     </div>
                     <p>Villa</p>
@@ -109,44 +124,44 @@ const Advertisement = () => {
                       {ad.price}
                     </p>
                   </div>
-                  <Button
-                    maxWidth = "227.33px"
-                    backgroundColor = "#703BF7"
-                    padding = "14px 46px"/// При padding як в Фігма не коректно виглядає
-                    text="View Property Details"
-                    onClick={() => alert("Small")}
-                  />
+                  <Button type="secondary" fullWidth={true}>View All Properties</Button>
                 </div>
               </div>
             ))}
           </div>
-          <div className="advertisement-pagination">
-            <div className="pagination-info">
-            {String(currentAdIndex + 1).padStart(2, '0')} of {advertisements.length}
+          <div className="pagination--wrapper">
+            <div className="pagination">
+              <div className="pagination-info">
+                {String(currentAdIndex + 1).padStart(2, "0")} of{" "}
+                {String(advertisements.length).padStart(2, "0")}
+              </div>
+              <div className="pagination-buttons">
+                <button
+                  onClick={goToPreviousAd}
+                  disabled={currentAdIndex === 0}
+                  className="pagination-button prev"
+                >
+                  <img
+                    src="/images/arrowLeft.png"
+                    alt="Previous"
+                    className="arrow"
+                  />
+                </button>
+                <button
+                  onClick={goToNextAd}
+                  disabled={currentAdIndex + adsToShow >= advertisements.length}
+                  className="pagination-button next"
+                >
+                  <img
+                    src="/images/arrowRigth.png"
+                    alt="Next"
+                    className="arrow"
+                  />
+                </button>
+              </div>
             </div>
-            <div className="pagination-buttons">
-              <button
-                onClick={goToPreviousAd}
-                disabled={currentAdIndex === 0}
-                className="pagination-button prev"
-              >
-                <img
-                  src="/images/arrowLeft.png"
-                  alt="Previous"
-                  className="arrow"
-                />
-              </button>
-              <button
-                onClick={goToNextAd}
-                disabled={currentAdIndex + adsToShow >= advertisements.length}
-                className="pagination-button next"
-              >
-                <img
-                  src="/images/arrowRigth.png"
-                  alt="Next"
-                  className="arrow"
-                />
-              </button>
+            <div className="pagination--button--mobile">
+              <Button type="secondary">View All Properties</Button>
             </div>
           </div>
         </div>

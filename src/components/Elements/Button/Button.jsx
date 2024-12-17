@@ -1,36 +1,21 @@
 import React from "react";
-import '@/components/Elements/Button/Button.scss';
+import "@/components/Elements/Button/Button.scss";
+import PropTypes from "prop-types";
+const Button = ({ type = "primary", fullWidth = false, children, onClick }) => {
+  const buttonClass = `buttons ${type} ${fullWidth ? "fullWidth" : ""}`;
 
-const Button = ({
-  text,
-  width = '100%', 
-  maxWidth = '271px',
-  height = '49px', 
-  color = '#FFFFFF', 
-  backgroundColor = 'transparent',
-  padding = '20px 14px',
-  onClick,
-  className = "" 
-}) => {
   return (
-    <button
-    className={`buttons--template ${className}`}  
-      style={{
-        width: width,  
-        maxWidth: maxWidth, 
-        backgroundColor: backgroundColor,
-        height: height,
-        color: color,
-        padding: padding,
-      
-      }}
-      onClick={onClick}
-    >
-      {text}
+    <button className={buttonClass} onClick={onClick}>
+      {children}
     </button>
   );
 };
 
+Button.propTypes = {
+  type: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
+  fullWidth: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+};
+
 export default Button;
-
-
