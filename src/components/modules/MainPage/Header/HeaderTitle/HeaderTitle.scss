@@ -76,25 +76,26 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 98px;
-  gap: 8px;/* Не відповідає Фігмі Бо не коректно тут вилядає */
+  gap: 16px;
 }
 
 
 .header-title--experience--case{
   margin-top: 50px;
   width: 100%;
-  max-width: 192.67px;
-  max-height: 99px;
-  height: 100%;
+  height: auto;
   box-sizing: border-box;
   border: 1px solid #262626;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 10px;   /* Не відповідає Фігмі Бо не коректно тут вилядає */
+  
+  padding-left: 20px;   
   padding-top: 14px;
-  padding-bottom: 14px; 
+  padding-bottom: 14px;
+  padding-right: 20px; 
+
   background-color: #1A1A1A;
   
 }
@@ -121,6 +122,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #999999;
+  margin-bottom: 0;
 }
 
 @media (max-width: 900px) {
@@ -130,11 +132,13 @@
 }
 
 .header-title{
+  margin-top: 40px;
   display: grid;
   grid-column: 1 / 7;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto 1fr;
-  
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .header-title--info{
@@ -171,16 +175,13 @@
   background-position: center; 
   height: auto;
   height: 70vh;
+  border: 1px solid #262626;
+  border-radius: 12px;
 }
 
 .header-title--experience{
   gap: 12px;
   flex-wrap: wrap;
-}
-
-.header-title--experience--case{
-  width: 40%;
-  max-width: 100%;
 }
 
 .header-title--experience {
@@ -191,11 +192,24 @@
 }
 
 .header-title--experience--case {
+  width: 40%;
+  max-width: 100%;
+  padding: 16px 14px;
   text-align: center;
   justify-content: center;
   align-items: center;
   margin-top: 0;
   flex: 1 1 33.3%; 
+}
+
+.header-title--experience--case h2{
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.header-title--experience--case p{
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .header-title--experience--case:last-child {

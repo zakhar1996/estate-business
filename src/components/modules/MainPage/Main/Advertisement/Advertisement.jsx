@@ -29,7 +29,7 @@ const Advertisement = () => {
     handleResize();
     window.addEventListener("resize", handleResize); // Додаємо слухача подій для зміни розміру екрану
 
-    // Очищаємо обробник події при демонтажі компонента
+ 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

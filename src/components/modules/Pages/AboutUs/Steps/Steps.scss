@@ -1,0 +1,207 @@
+.steps-wrapper{
+  margin-top: 65px;
+}
+
+.steps-header {
+  margin-top: 6px;
+  max-width: 1029px;
+}
+
+.steps-header h2{
+  margin-top:0;
+  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  font-family: Urbanist;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 57px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.steps-header p {
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.steps-cards {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.step-card {
+   background-color: transparent;
+   border-radius: 10px;
+   flex: 1 1 calc(33.333% - 20px);
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+ }
+
+.step-card-header{
+  padding: 14px 16px;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+  border-left: 1px solid #703BF7;
+ }
+
+
+ .step--card--description{
+  padding: 40px;
+  position: relative;
+  border: 1px solid;
+  border-image-source: linear-gradient(0deg, #262626, #262626),
+  linear-gradient(117.89deg, #703BF7 0%, rgba(112, 59, 247, 0) 24%);
+  border-radius: 10px;
+  border-color: #262626;
+  height: 100%;
+ }
+
+ .step--card--description::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px; /* Ширина кутового елемента */
+  height: 160px; /* Висота кутового елемента */
+  background: linear-gradient(120.79deg, #703BF7 -49.01%, rgba(112, 59, 247, 0) 13.65%);
+
+  // clip-path: polygon(0 0, 100% 0, 0 100%); /* Формує трикутну форму */
+  z-index: 2;
+
+}
+
+.step--card--description--title{
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.step--card--description--text{
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+// .step-number {
+//   color: #fff;
+//   font-size: 0.9rem;
+// }
+
+// .step-title {
+//   font-size: 1.2rem;
+//   color: #fff;
+//   margin-bottom: 10px;
+// }
+
+// .step-description {
+//   font-size: 0.9rem;
+//   color: #ccc;
+//   line-height: 1.5;
+// }
+
+@media (max-width: 900px) {
+
+.steps-wrapper{
+  margin-top: 61px;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.steps-header{
+  max-width: 100%;
+  margin-top: 8px;
+}
+
+.steps-header h2{
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.steps-header p {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.steps-cards{
+  margin-top: 40px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.steps-cards .step-card:nth-child(4) {
+  display: none;
+}
+
+.steps-cards .step-card:nth-child(5) {
+  display: none;
+}
+
+.steps-cards .step-card:nth-child(6) {
+  display: none;
+}
+
+.step-card{
+  flex-basis: 100%;
+}
+
+.step-card-header{
+  padding: 14px 16px ;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.step--card--description{
+  padding: 30px;
+}
+
+.step--card--description--title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.step--card--description--text{
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
+
+}

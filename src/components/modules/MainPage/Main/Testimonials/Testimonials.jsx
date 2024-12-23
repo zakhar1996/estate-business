@@ -161,7 +161,7 @@ const Testimonials = () => {
               </div>
             </div>
             <div className="pagination--button--mobile">
-              <Button type="secondary">View All Properties</Button>
+              <Button type="tertiary">View All Properties</Button>
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@
 
 .OurJourneyWrapper--description{
   grid-column: 1 / 7;
+
 }
 
 .OurJourneyWrapper--content--logo{
@@ -44,11 +45,12 @@
   grid-column: 7 / 13;
   background-repeat: no-repeat;
   width: 100%;
-
   background-size: cover;
   background-position: center; 
   display: flex;
   border: 1px solid #262626;
+  border-radius: 12px;
+  margin-left: 60px;
 }
 
 .OurJourneyWrapper--images--buil{
@@ -56,3 +58,49 @@
   background-position: center;   
 }
 
+@media (max-width: 900px) {
+
+.OurJourneyWrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 50px;
+  gap: 21px;
+}
+
+.OurJourneyWrapper--backgroundImage{
+  margin-left: 0;
+}
+
+.OurJourneyWrapper--description{
+  padding-right: 0;
+}
+  
+.OurJourneyWrapper--content--logo{
+  margin-top: 0;
+}
+
+.OurJourneyWrapper--content--title{
+  margin-top: 8px;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.OurJourneyWrapper--content--description{
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.header-title--experience{
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.journey-title--experience{
+  gap: 16px;
+}
+
+}
+  

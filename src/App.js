@@ -11,7 +11,8 @@ import Asked from "@/components/modules/MainPage/Main/Asked/Asked";
 import Article from "@/components/modules/MainPage/Footer/Article/Article";
 import FooterNavigator from "@/components/modules/MainPage/Footer/FooterNavigator/FooterNavigator";
 import FooterBottom from "@/components/modules/MainPage/Footer/FooterBottom/FooterBottom";
-import AboutUs from "@/components/modules/AboutUs/AboutUs";
+import AboutUs from "@/components/modules/Pages/AboutUs/AboutUs";
+
 
 function App() {
   return (
@@ -40,7 +41,6 @@ function App() {
           path="/about"
           element={
             <>
-              <NavigationMenu />
               <AboutUs />
             </>
           }

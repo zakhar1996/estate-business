@@ -1,0 +1,214 @@
+.team-header{
+  margin-top: 90px;
+  max-width: 1030px;
+}
+
+.team-header--logo{
+  transform: translateX(-10px);
+}
+
+.team-header h2 {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 57px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.team-header p{
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.team-cards {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  justify-content: stretch;
+
+}
+
+.team-card-image{
+  position: relative;
+}
+
+.team-card-image--profile img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team-social {
+  position: absolute;
+  bottom: -9%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #703BF7;
+  border-radius: 50%;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.team-card {
+  border: 1px solid #262626;
+  border-radius: 12px;
+  padding: 24px;
+  flex: 1 1 14%;
+  display: flex;
+  flex-direction: column;
+ justify-content: space-between;  
+}
+
+.team-card-content{
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card-content h3{
+  margin-top: 32px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.team-card-content p {
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.team-card-footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 20px;
+}
+
+.say-hello-btn {
+  background-color: #1A1A1A;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 10px 10px 20px;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.say-hello-btn img {
+  width: 36px;
+  height: 36px;
+}
+
+@media (max-width: 900px) {
+.team-header{
+  margin-top: 61px;
+}
+
+.team-wrapper{
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.team-wrapper{
+  margin-top: 8px;
+  font-size: 28px;
+  line-height: 42px;
+}
+
+.team-header p{
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.team-cards{
+  margin-top: 40px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.team-card{
+  flex: 1 1 100%;
+  padding: 20px;
+}
+
+.team-social{
+  bottom: -3%;
+}
+
+.team-card-content h3{
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.team-card-content p {
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.team-card-footer{
+  margin-top: 16px;
+}
+
+.say-hello-btn{
+  padding: 8px 8px 8px 24px;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.say-hello-btn img {
+  width: 48px;
+  height: 48px;
+}
+
+}

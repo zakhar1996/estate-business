@@ -45,12 +45,13 @@
 }
 
 .navigationMenyWrapper--pages{
+  max-width: 340px;
   width: 100%;
-  max-width: 322px;
   height: 100%;
   max-height: 45px; 
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .navigationMenyWrapper--pages a {
@@ -60,7 +61,7 @@
   font-family: Urbanist;
   font-size: 14px;
   font-weight: 500;
-  line-height: 27px;
+  line-height: 21px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
@@ -98,7 +99,7 @@
   background-color: #141414;
   border: 1px solid #262626;
   border-radius: 10px;
-  padding: 14px 24px;
+  padding: 12px 20px;
   text-align: center;
   align-self: center;
 }
