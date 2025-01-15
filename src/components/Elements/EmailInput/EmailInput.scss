@@ -9,6 +9,7 @@
   height: 52px;
   width: 100%;///// при налаштуванні ширини як по фігмі Gap з лінками буде інший
   box-sizing: border-box;
+  position: relative;
 }
 
 .footerNavigator-emailButton {
@@ -16,6 +17,10 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  position: absolute;
+  right: 16.13px;
+  top: 23%;
+
 
   & .footerNavigator-emailIcon {
     width: 24px;

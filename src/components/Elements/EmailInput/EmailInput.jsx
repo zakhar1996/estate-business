@@ -1,15 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import "@/components/Elements/EmailInput/EmailInput.scss";
 
-const EmailInput = ({ 
-  placeholder = "Enter Your Email", 
-  icon = "/images/mail.png", 
-  sendIcon = "/images/Send.png", 
-  onSubmit 
+const EmailInput = ({
+  placeholder = "Enter Your Email",
+  icon = "/images/mail.png",
+  sendIcon = "/images/Send.png",
+  onSubmit,
 }) => {
   return (
-    <div className="footerNavigator-email">
+    <label className="footerNavigator-email">
       <input
         type="email"
         placeholder={placeholder}
@@ -18,17 +18,10 @@ const EmailInput = ({
           backgroundImage: `url('${icon}')`,
         }}
       />
-      <button 
-        className="footerNavigator-emailButton"
-        onClick={onSubmit}
-      >
-        <img
-          src={sendIcon}
-          alt="Send"
-          className="footerNavigator-emailIcon"
-        />
+      <button className="footerNavigator-emailButton" onClick={onSubmit}>
+        <img src={sendIcon} alt="Send" className="footerNavigator-emailIcon" />
       </button>
-    </div>
+    </label>
   );
 };
 

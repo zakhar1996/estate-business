@@ -1,0 +1,205 @@
+// import React, { useState } from "react";
+// import Slider from "react-slick";
+// import "@/components/modules/Pages/properties/SeasideSerenityVilla/SeasideSerenityVilla.scss";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import { PrevArrow, NextArrow, Dots } from "./CustomArrows";
+
+// const SeasideSerenityVilla = () => {
+//   const property = {
+//     title: "Seaside Serenity Villa",
+//     location: "Malibu, California",
+//     price: "$1,250,000",
+
+//     images: [
+//       "/images/property1.jpg",
+//       "/images/property2.jpg",
+//       "/images/property2.jpg",
+//       "/images/property2.jpg",
+//       "/images/property2.jpg",
+//       "/images/property2.jpg",
+//       "/images/property1.jpg",
+//       "/images/property2.jpg",
+//       "/images/property2.jpg",
+//       "/images/property2.jpg",
+//       "/images/property2.jpg",
+//       "/images/property2.jpg",
+//     ],
+//   };
+
+//   const [slider1, setSlider1] = useState(null);
+//   const [slider2, setSlider2] = useState(null);
+//   const [activeSlide, setActiveSlide] = useState(0);  // Додано useState для activeSlide
+
+//   const settingsMain = {
+//     dots: false,
+//     arrows: false,
+//     fade: false,
+//     asNavFor: slider2,
+//     ref: (slider) => setSlider1(slider),
+//     infinite: false,
+//     speed: 500,
+//     slidesToShow: 2,
+//     slidesToScroll: 1,
+//     beforeChange: (_, next) => setActiveSlide(next),  // Виправлено помилку
+
+//   };
+
+//   const settingsThumb = {
+//     dots: false,
+//     arrows: false,
+//     slidesToShow: 9,
+//     swipeToSlide: true,
+//     focusOnSelect: true,
+//     asNavFor: slider1,
+//     ref: (slider) => setSlider2(slider),
+//     infinite: true,
+//     speed: 500,
+//     slidesToScroll: 1,
+//   };
+
+//   return (
+//     <div className="slider-container">
+//       {/* Заголовок та локація */}
+//       <header className="slider--container--header">
+//         <div className="slider--container--header--descriprion">
+//           <h1>{property.title}</h1>
+//           <div className="slider--container--header--descriprion--map">
+//             <div className="slider--container--header--descriprion--map--icon">
+//               <img src="/images/locationImages.png" alt="" />
+//             </div>
+//             <p>{property.location}</p>
+//           </div>
+//         </div>
+//         <div className="slider--container--header--price">
+//           <div className="slider--container--header--price--text">
+//             <p>Price</p>
+//           </div>
+//           <p className="slider--container--header--price--tax">
+//             {property.price}
+//           </p>
+//         </div>
+//       </header>
+
+//       {/* Головний слайдер + прев’ю-слайдер */}
+//       <section className="slider--wrapper">
+//         <Slider {...settingsThumb} className="thumbnail-slider">
+//           {property.images.map((imageUrl, index) => (
+//             <div className="thumbnail-slider--images" key={index}>
+//               <img
+//                 src={imageUrl}
+//                 alt={`Thumbnail ${index}`}
+//                 className="thumbnail-image"
+//               />
+//             </div>
+//           ))}
+//         </Slider>
+//         <Slider {...settingsMain} className="main-slider">
+//           {property.images.map((imageUrl, index) => (
+//             <div className="main-slider--images" key={index}>
+//               <img
+//                 src={imageUrl}
+//                 alt={`Property ${index}`}
+//                 className="main-slider-image"
+//               />
+//             </div>
+//           ))}
+//         </Slider>
+
+//         <div></div>
+
+//         {/* Кастомні Стрілки */}
+//         <div className="custom-arrows">
+//           <PrevArrow onClick={() => slider1?.slickPrev()} />
+//           <Dots activeIndex={activeSlide} length={property.images.length} />  {/* Виправлено */}
+//           <NextArrow onClick={() => slider1?.slickNext()} />
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default SeasideSerenityVilla;
+
+
+
+
+// // CustomArrows.jsx
+
+// // CustomArrows.jsx
+// import React from "react";
+// import "@/components/modules/Pages/properties/SeasideSerenityVilla/CustomArrows.scss";
+
+// const PrevArrow = ({ onClick }) => (
+//   <button className="prev-button" onClick={onClick}>
+//     <img src="/images/arrowLeft.png" alt="prev" />
+//   </button>
+// );
+
+// const NextArrow = ({ onClick }) => (
+//   <button className="next-button" onClick={onClick}>
+//     <img src="/images/arrowRigth.png" alt="next" />
+//   </button>
+// );
+
+// const Dots = ({ activeIndex, length }) => {
+//   const indicators = 6;  // Фіксована кількість індикаторів
+//   return (
+//     <div className="dots-container">
+//       {Array.from({length: indicators }).map((_, index) => (
+//         <div
+//           key={index}
+//           className={`dot ${index === activeIndex ? "dot-active" : ""}`}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+
+// export { PrevArrow, NextArrow, Dots };
+
+
+// .dots-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 3px;
+
+//   .dot {
+//     width: 11.7px;
+//     height: 3px;
+//     background-color: #4D4D4D;
+//     border-radius: 60px;
+//     transition: background-color 0.3s ease;
+//   }
+
+//   .dot-active {
+//     background-color: #703BF7;
+//   }
+// }
+
+// // Стилі для стрілок
+// .prev-button,
+// .next-button {
+//   background-color: transparent;
+//   border: none;
+//   padding: 0;
+//   cursor: pointer;
+// }
+
+// .prev-button img,
+// .next-button img {
+//   width: 44px;
+//   height: 44px;
+//   transition: opacity 0.3s ease;
+// }
+
+// // Логіка для disabled стану
+// .pagination-button[disabled] .arrow {
+//   opacity: 0.5;  // Напівпрозорість для неактивних стрілок
+//   // filter: brightness(0.7);
+// }
+
+// .pagination-button:not([disabled]) .arrow {
+//   opacity: 1;
+// }

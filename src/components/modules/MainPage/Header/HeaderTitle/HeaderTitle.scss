@@ -32,6 +32,12 @@
   height: 100%;
 }
 
+.header-title--images img{
+  width: 100%;
+  height: 100%;
+}
+
+
 .header-title--info {
   margin-top: 98px;
   z-index: 0;
@@ -89,12 +95,9 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   
-  padding-left: 20px;   
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-right: 20px; 
+  padding: 20px;
 
   background-color: #1A1A1A;
   
@@ -167,17 +170,18 @@
 .header-title--logo{
   grid-column: 1;
   left: 16px;
-  top: 43%;
+  top: 40%;
 }
 .header-title--images{
   grid-row: 1;
   grid-column: 1 / 7;
   background-position: center; 
   height: auto;
-  height: 70vh;
+  height: 60vh;
   border: 1px solid #262626;
   border-radius: 12px;
 }
+
 
 .header-title--experience{
   gap: 12px;

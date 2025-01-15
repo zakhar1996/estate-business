@@ -15,7 +15,9 @@ const HeaderTitle = () => {
             our listings to find the home that matches your dreams.
           </p>
           <div className="header-title--buttons">
-            <Button type="primary" fullWidth = {false}>Learn More</Button>
+            <Button type="primary" fullWidth={false}>
+              Learn More
+            </Button>
             <Button type="secondary">Browse Properties</Button>
           </div>
           <div className="header-title--experience">
@@ -36,12 +38,9 @@ const HeaderTitle = () => {
         <div className="header-title--logo">
           <img src="/images/headerTitleLogo.png" alt="Company Logo" />
         </div>
-        <div
-          style={{
-            backgroundImage: "url('/images/headerTitleImages.png')",
-          }}
-          className="header-title--images"
-        ></div>
+        <div className="header-title--images">
+          <img src="/images/headerTitleImages.png" alt="" />
+        </div>
       </div>
     </div>
   );

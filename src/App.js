@@ -12,7 +12,7 @@ import Article from "@/components/modules/MainPage/Footer/Article/Article";
 import FooterNavigator from "@/components/modules/MainPage/Footer/FooterNavigator/FooterNavigator";
 import FooterBottom from "@/components/modules/MainPage/Footer/FooterBottom/FooterBottom";
 import AboutUs from "@/components/modules/Pages/AboutUs/AboutUs";
-
+import Properties from "@/components/modules/Pages/properties/Properties";
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
             </div>
           }
         />
-         <Route
+        <Route
           path="/about"
           element={
             <>
@@ -45,6 +45,7 @@ function App() {
             </>
           }
         />
+        <Route path="/properties" element={<Properties />} />
       </Routes>
     </Router>
   );

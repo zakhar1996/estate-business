@@ -1,0 +1,225 @@
+.costs-overview {
+  margin-top: 90px;
+}
+
+.costs-overview--header--logo {
+  transform: translateX(-10px);
+}
+
+.costs-overview--header--title {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 57px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.costs-overview--header--description {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  max-width: 1079px;
+  color: #999999;
+}
+
+.costs--note-box {
+  margin-top: 60px;
+  display: flex;
+  background-color: #1a1a1a;
+  border: 1px solid #262626;
+  border-radius: 8px;
+  padding: 20px 40px 20px 40px;
+  align-items: center;
+}
+
+.costs--note-box--titlle {
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+  border-right: 1px solid #262626;
+  padding-right: 16px;
+}
+
+.costs--note-box--description {
+  margin: 0;
+  padding-left: 16px;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.costs-overview--form {
+  display: flex;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.costs-overview--form--price--text {
+  margin: 0;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;
+}
+
+.costs-overview--form--price--cost {
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-family: Urbanist;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 45px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.costs-section--wrapper {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.costs-section {
+  padding: 40px;
+  border: 1px solid #262626;
+  border-radius: 12px;
+}
+
+.costs-section__title--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.costs-section__title {
+  margin: 0;
+  color: #ffffff;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.costs-section--special {
+  display: flex;
+  border-top: 1px solid #262626;
+}
+
+.costs-section--items {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+}
+
+@media (max-width: 900px) {
+  .costs-overview {
+    margin-top: 61px;
+    margin-left: 16px;
+    margin-right: 17px;
+  }
+
+  .costs-overview--header--title {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .costs-overview--header--description {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+
+  .costs--note-box {
+    margin-top: 40px;
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .costs--note-box--titlle {
+    font-size: 18px;
+    line-height: 27px;
+    border-right: none;
+    padding-right: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #262626;
+  }
+
+  .costs--note-box--description {
+    margin-top: 10px;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .costs-overview--form {
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .costs-overview--form--price--text {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .costs-overview--form--price--cost {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .costs-section--wrapper {
+    gap: 20px;
+  }
+
+  .costs-section {
+    padding: 20px;
+  }
+
+  .costs-section__title--wrapper {
+    margin-bottom: 20px;
+  }
+
+  .costs-section__title {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .costs-section--special {
+    flex-wrap: wrap;
+  }
+}

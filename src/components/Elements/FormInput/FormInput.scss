@@ -1,0 +1,259 @@
+.form-input {
+  width: 100%;         
+  // max-width: 338.5px;
+}
+
+.form-input__label {
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+// text input
+.form-input--text {
+  max-width: 100%;
+}
+
+.form-input--text__wrapper {
+  width: 100%;
+}
+
+.form-input__input {
+  margin-top: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  padding: 16px 20px;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;  // Додаємо колір тексту
+}
+
+.form-input__input::placeholder {
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #666666;
+ 
+
+}
+
+/* Зміна тексту при фокусі (написання) */
+.form-input__input:focus {
+  border-color: #5A9;  // Колір рамки при фокусі
+  outline: none;
+  color: white;
+}
+
+
+// Select
+.form-input--select {
+  max-width: 100%;
+}
+
+.form-input--select__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-input__select {
+  margin-top: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  padding: 16px 20px;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #FFFFFF;
+  appearance: none;
+}
+
+.select-icon {
+  position: absolute;
+  top: 45%;
+  right: 17.25px;
+  // transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+/// textarea
+.form-input--textarea {
+  max-width: 100%;
+
+}
+
+.form-input--textarea__wrapper {
+  width: 100%;
+  
+}
+
+.form-input__textarea {
+  margin-top: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1A1A1A;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  padding: 16px 20px 0px 20px;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #FFFFFF;
+
+  min-height: 122px;  // Мінімальна висота 122px
+  height: auto;       // Висота адаптується за контентом
+  resize: vertical;   // Дозволяє вертикальне збільшення
+}
+
+/* Стилізація placeholder */
+.form-input__textarea::placeholder {
+  font-family: Urbanist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #666666;
+
+}
+
+/* Зміна тексту при фокусі (написання) */
+.form-input__textarea:focus {
+  border-color: #5A9;  // Колір рамки при фокусі
+  outline: none;
+}
+
+///chekbox
+
+.checkbox-wrapper{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-text{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Стилізація самого чекбоксу */
+.checkbox-wrapper input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  appearance: none;  // Видаляє стандартний стиль браузера
+  border: 1px solid #262626;
+  border-radius: 4px;
+  background-color: #1A1A1A;
+  position: relative;
+  outline: none;
+}
+
+/* Іконка для позначення галочки */
+.checkbox-wrapper input[type="checkbox"]:checked {
+  background-color: #5A9; 
+  border-color: #5A9;
+}
+
+/* Додаємо галочку через псевдоелемент */
+.checkbox-wrapper input[type="checkbox"]:checked::before {
+  content: "✔";  // Галочка
+  color: #ffffff;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Стилізація тексту поруч з чекбоксом */
+.checkbox-wrapper label {
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999;  
+}
+
+/* Стилізація посилань всередині label */
+.checkbox-wrapper label a {
+  font-family: Urbanist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #999999; 
+}
+
+@media (max-width: 900px) {
+
+  .form-input__label{
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .form-input__input{
+    margin-top: 10px;
+    padding: 16px 20px;
+  }
+
+  .form-input__select{
+    margin-top: 10px;
+    padding: 16px 20px;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 100%;
+  }
+
+  .form-input__option{
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 80%;
+  }
+
+  .form-input__label{
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .form-input__textarea{
+    margin-top: 10px;
+    padding: 16px 20px 0 20px;
+    min-height: 90px;
+    height: 102px;
+    box-sizing: border-box;
+  }
+
+}

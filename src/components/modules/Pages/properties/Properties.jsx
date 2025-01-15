@@ -1,18 +1,16 @@
 import React from "react";
-import "@/components/modules/Pages/AboutUs/AboutUs.scss";
+import SeasideSerenityVilla from "@/components/modules/Pages/properties/SeasideSerenityVilla/SeasideSerenityVilla";
 import WindowTop from "@/components/modules/MainPage/Header/WindowTop/WindowTop";
 import NavigationMenu from "@/components/modules/MainPage/Header/Navigation/NavigationMenu";
-import Journey from "@/components/modules/Pages/AboutUs/Journey/Journey";
-import Values from "@/components/modules/Pages/AboutUs/Values/Values";
-import Achievements from "@/components/modules/Pages/AboutUs/Achievements/Achievements";
-import Steps from "@/components/modules/Pages/AboutUs/Steps/Steps";
-import TeamSection from "@/components/modules/Pages/AboutUs/TeamSection/TeamSection";
-import ClientsSection from "@/components/modules/Pages/AboutUs/ClientsSection/ClientsSection";
+import PropertyCard from "@/components/modules/Pages/properties/PropertyCard/PropertyCard";
+import Form from "@/components/modules/Pages/properties/Form/Form";
+import CostsOverview from "@/components/modules/Pages/properties/CostsOverview/CostsOverview";
+import Asked from "@/components/modules/MainPage/Main/Asked/Asked";
 import Article from "@/components/modules/MainPage/Footer/Article/Article";
 import FooterNavigator from "@/components/modules/MainPage/Footer/FooterNavigator/FooterNavigator";
 import FooterBottom from "@/components/modules/MainPage/Footer/FooterBottom/FooterBottom";
 
-const AboutUs = () => {
+const Properties = () => {
   return (
     <>
       <WindowTop />
@@ -20,14 +18,14 @@ const AboutUs = () => {
       <div className="mainHomePage--wrapper">
         <div className="parentContainer">
           <div className="container">
-            <Journey />
-            <Values />
-            <Achievements />
-            <Steps />
-            <TeamSection />
-            <ClientsSection />
+            <SeasideSerenityVilla />
+            <PropertyCard />
+            <Form />
+            <CostsOverview />
           </div>
         </div>
+        <Asked />
+        {/* тут інший маржін чим в home page */}
         <Article />
         <FooterNavigator />
         <FooterBottom />
@@ -36,4 +34,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default Properties;
